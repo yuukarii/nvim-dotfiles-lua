@@ -8,3 +8,9 @@ vim.opt.expandtab = true
 vim.opt.wrap = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+vim.opt.syntax = "ON"
+
+vim.g.Tlist_Ctags_Cmd = '/usr/bin/ctags'
+
+

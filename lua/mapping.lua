@@ -1,5 +1,14 @@
 -- MAPPING
 
+-- Toggle Tagbar
+vim.keymap.set('n', 't', '<cmd>TagbarToggle<CR>')
+
+-- Open Telescope find_files
+vim.keymap.set('n', 'ff', '<cmd>Telescope find_files<CR>')
+
+-- Toggle NvimTree
+vim.keymap.set('n', '<F2>', '<cmd>NvimTreeToggle<CR>')
+
 -- Mapping key for work with tab
 vim.keymap.set('n', '<F5>', '<cmd>tabnew<CR>')
 vim.keymap.set('n', '<C-Left>', '<cmd>tabprevious<CR>')

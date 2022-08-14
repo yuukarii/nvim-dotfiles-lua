@@ -1,3 +1,6 @@
 require('setup')
 require('mapping')
 require('plugins')
+require('plugins_setup.nvim-tree')
+require('plugins_setup.lualine')
+require('plugins_setup.nvim-autopairs')
