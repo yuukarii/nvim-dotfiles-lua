@@ -16,5 +16,5 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   Plug('tpope/vim-fugitive')
   Plug('junegunn/gv.vim')
   Plug('windwp/nvim-autopairs')
-
+  Plug('dense-analysis/ale')
 vim.call('plug#end')

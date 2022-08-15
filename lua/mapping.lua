@@ -1,12 +1,28 @@
 -- MAPPING
+-- LIST KEY
+--
+-- t    TagbarToggle
+-- ff   Open Telescope find_files
+-- fg   Open Telescope live_grep
+-- <F2> Open Nvim tree for file exploring
+--
+-- <F5> Open a new tab
+-- <C-Left> Tab previous
+-- <C-Right> Tab next
+--
+-- \\   Turn off highlight after search
+--
+-- jj   Exit insert mode quickly
+--
 
--- Find a string in all files
-vim.keymap.set('n', '<F3>', ':!grep --include=*.{java,py,pl,pm,xml,lua} -3 -rnw . -e "')
 -- Toggle Tagbar
 vim.keymap.set('n', 't', '<cmd>TagbarToggle<CR>')
 
 -- Open Telescope find_files
 vim.keymap.set('n', 'ff', '<cmd>Telescope find_files<CR>')
+
+-- Open Telescope live_grep
+vim.keymap.set('n', 'fg', '<cmd>Telescope live_grep<CR>')
 
 -- Toggle NvimTree
 vim.keymap.set('n', '<F2>', '<cmd>NvimTreeToggle<CR>')
