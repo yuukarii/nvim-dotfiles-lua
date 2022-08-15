@@ -1,5 +1,7 @@
 -- MAPPING
 
+-- Find a string in all files
+vim.keymap.set('n', '<F3>', ':!grep --include=*.{java,py,pl,pm,xml,lua} -3 -rnw . -e "')
 -- Toggle Tagbar
 vim.keymap.set('n', 't', '<cmd>TagbarToggle<CR>')
 
@@ -19,9 +21,6 @@ vim.keymap.set('n', '<Leader>\\', '<cmd>noh<CR>')
 
 -- Type jj to exit insert mode
 vim.keymap.set('i', 'jj', '<Esc>')
-
--- Press space bar to type : in normal mode
-vim.keymap.set('n', '<space>', ':')
 
 -- Center the cursor affter moving to the next word during a search
 vim.keymap.set('n', 'n', 'nzz')

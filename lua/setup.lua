@@ -13,4 +13,11 @@ vim.opt.syntax = "ON"
 
 vim.g.Tlist_Ctags_Cmd = '/usr/bin/ctags'
 
+vim.api.nvim_create_autocmd("FileType", { pattern = "lua,xml,perl",
+  callback = function()
+    vim.opt.shiftwidth = 2
+    vim.opt.tabstop = 2
+    vim.opt.expandtab = true
+  end
+})
 
