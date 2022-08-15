@@ -13,7 +13,21 @@
 -- \\   Turn off highlight after search
 --
 -- jj   Exit insert mode quickly
---
+-- <F3> Open completion suggest
+-- <C-l> Move to left split window
+-- <C-h> Move to right split window
+
+-- Quick move to above split window
+vim.keymap.set('n', '<C-k>', '<C-w>k')
+
+-- Quick move to below split window
+vim.keymap.set('n', '<C-j>', '<C-w>j')
+
+-- Quick move to right split window
+vim.keymap.set('n', '<C-h>', '<C-w>h')
+
+-- Quick move to left split window
+vim.keymap.set('n', '<C-l>', '<C-w>l')
 
 -- Toggle Tagbar
 vim.keymap.set('n', 't', '<cmd>TagbarToggle<CR>')
