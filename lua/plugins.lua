@@ -1,34 +1,20 @@
-return require('packer').startup({function(use)
-  use 'wbthomason/packer.nvim'
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons',
-    }
-  }
-  use { 'mhinz/vim-startify' }
-  use { 'DanilaMihailov/beacon.nvim' }
-  use {
-    'nvim-lualine/lualine.nvim',                     -- statusline
-    requires = {'kyazdani42/nvim-web-devicons',
-                opt = true}
-  }
-  use { 'Mofiqul/dracula.nvim' }
+local Plug = vim.fn['plug#']
+
+vim.call('plug#begin', '~/.config/nvim/plugged')
+  Plug('kyazdani42/nvim-web-devicons') --  optional, for file icons
+  Plug('kyazdani42/nvim-tree.lua')
+  Plug('mhinz/vim-startify')
+  Plug('danilamihailov/beacon.nvim')
+  Plug('nvim-lualine/lualine.nvim')
+  Plug('Mofiqul/dracula.nvim')
 
   -- [[ DEV ]]
-  use {
-    'nvim-telescope/telescope.nvim',                 -- fuzzy finder, should install ripgrep
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
-  use { 'majutsushi/tagbar' }                        -- code structure
-  use { 'Yggdroot/indentLine' }                      -- see indentation
-  use { 'tpope/vim-fugitive' }                       -- git integration
-  use { 'junegunn/gv.vim' }                          -- commit history
-  use { 'windwp/nvim-autopairs' } 
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-end,
-config = {
-  display = {
-    open_fn = require('packer.util').float,
-  }
-}})
+  Plug('nvim-lua/plenary.nvim')
+  Plug('nvim-telescope/telescope.nvim')
+  Plug('majutsushi/tagbar')
+  Plug('yggdroot/indentline')
+  Plug('tpope/vim-fugitive')
+  Plug('junegunn/gv.vim')
+  Plug('windwp/nvim-autopairs')
+
+vim.call('plug#end')
