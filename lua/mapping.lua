@@ -38,6 +38,10 @@ vim.keymap.set('n', '<Leader>\\', '<cmd>noh<CR>')
 -- Type jj to exit insert mode
 vim.keymap.set('i', 'jj', '<Esc>')
 
+
+-- Type jj to exit insert mode
+vim.keymap.set('i', '<F3>', '<C-n>')
+
 -- Center the cursor affter moving to the next word during a search
 vim.keymap.set('n', 'n', 'nzz')
 vim.keymap.set('n', 'N', 'Nzz')
