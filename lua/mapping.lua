@@ -1,6 +1,6 @@
--- MAPPING
 -- LIST KEY
 --
+-- [[ NORMAL MODE ]]
 -- t    TagbarToggle
 -- ff   Open Telescope find_files
 -- fg   Open Telescope live_grep
@@ -11,23 +11,24 @@
 -- <C-Right> Tab next
 --
 -- \\   Turn off highlight after search
+-- \ + Arrow keys to move around split windows
 --
+-- [[ INSERT MODE ]]
 -- jj   Exit insert mode quickly
 -- <F3> Open completion suggest
--- <C-l> Move to left split window
--- <C-h> Move to right split window
+--
 
 -- Quick move to above split window
-vim.keymap.set('n', '<C-k>', '<C-w>k')
+vim.keymap.set('n', '<Leader><Up>', '<C-w>k')
 
 -- Quick move to below split window
-vim.keymap.set('n', '<C-j>', '<C-w>j')
+vim.keymap.set('n', '<Leader><Down>', '<C-w>j')
 
 -- Quick move to right split window
-vim.keymap.set('n', '<C-h>', '<C-w>h')
+vim.keymap.set('n', '<Leader><Right>', '<C-w>l')
 
 -- Quick move to left split window
-vim.keymap.set('n', '<C-l>', '<C-w>l')
+vim.keymap.set('n', '<Leader><Left>', '<C-w>h')
 
 -- Toggle Tagbar
 vim.keymap.set('n', 't', '<cmd>TagbarToggle<CR>')
@@ -52,8 +53,7 @@ vim.keymap.set('n', '<Leader>\\', '<cmd>noh<CR>')
 -- Type jj to exit insert mode
 vim.keymap.set('i', 'jj', '<Esc>')
 
-
--- Type jj to exit insert mode
+-- Type <F3> to open completion suggest
 vim.keymap.set('i', '<F3>', '<C-n>')
 
 -- Center the cursor affter moving to the next word during a search
