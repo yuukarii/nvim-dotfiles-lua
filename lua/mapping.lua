@@ -1,23 +1,3 @@
--- LIST KEY
---
--- [[ NORMAL MODE ]]
--- t    TagbarToggle
--- ff   Open Telescope find_files
--- fg   Open Telescope live_grep
--- <F2> Open Nvim tree for file exploring
---
--- <F5> Open a new tab
--- <C-Left> Tab previous
--- <C-Right> Tab next
---
--- \\   Turn off highlight after search
--- \ + Arrow keys to move around split windows
---
--- [[ INSERT MODE ]]
--- jj   Exit insert mode quickly
--- <F3> Open completion suggest
---
-
 -- Quick move to above split window
 vim.keymap.set('n', '<Leader><Up>', '<C-w>k')
 
@@ -53,9 +33,47 @@ vim.keymap.set('n', '<Leader>\\', '<cmd>noh<CR>')
 -- Type jj to exit insert mode
 vim.keymap.set('i', 'jj', '<Esc>')
 
--- Type <F3> to open completion suggest
-vim.keymap.set('i', '<F3>', '<C-n>')
-
 -- Center the cursor affter moving to the next word during a search
 vim.keymap.set('n', 'n', 'nzz')
 vim.keymap.set('n', 'N', 'Nzz')
+
+-- Mapping with coc plugin
+-- Make <CR> to accept selected completion item
+--
+-- Use `[g` and `]g` to navigate diagnostics
+-- Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+--
+-- Use gd, gy, gi, gr to go to code navigation
+--
+-- Use K to show documentation in preview window.
+--
+-- Highlight the symbol and its references when holding the cursor.
+--
+-- Symbol renaming by \rn
+--
+vim.cmd([[
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+        \: "\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+nmap <leader>rn <Plug>(coc-rename)
+]])

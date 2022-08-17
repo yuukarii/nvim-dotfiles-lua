@@ -8,8 +8,13 @@ vim.opt.expandtab = true
 vim.opt.wrap = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-
 vim.opt.syntax = "ON"
+
+-- SET UP FOR COC.NVIM
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.updatetime = 300 
+vim.opt.signcolumn = "yes"
 
 vim.api.nvim_create_autocmd("FileType", { pattern = "lua,xml,perl",
   callback = function()
@@ -18,4 +23,3 @@ vim.api.nvim_create_autocmd("FileType", { pattern = "lua,xml,perl",
     vim.opt.expandtab = true
   end
 })
-
