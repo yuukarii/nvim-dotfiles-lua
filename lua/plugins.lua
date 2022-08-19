@@ -11,7 +11,6 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
   -- [[ DEV ]]
   Plug('nvim-lua/plenary.nvim')
   Plug('nvim-telescope/telescope.nvim')
-  Plug('majutsushi/tagbar')
   Plug('yggdroot/indentline')
   Plug('tpope/vim-fugitive')
   Plug('junegunn/gv.vim')

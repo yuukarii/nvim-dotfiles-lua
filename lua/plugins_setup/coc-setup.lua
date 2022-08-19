@@ -12,6 +12,8 @@
 --
 -- Symbol renaming by \rn
 --
+vim.keymap.set('n', '<Leader>o', '<cmd>CocList outline<CR>')
+
 vim.cmd([[
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
         \: "\<CR>\<c-r>=coc#on_enter()\<CR>"
