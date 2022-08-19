@@ -19,9 +19,9 @@ vim.opt.signcolumn = "yes"
 
 vim.api.nvim_create_autocmd("FileType", { pattern = "lua,xml,perl",
   callback = function()
-    vim.opt.shiftwidth = 2
-    vim.opt.tabstop = 2
-    vim.opt.expandtab = true
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.tabstop = 2
+    vim.opt_local.expandtab = true
   end
 })
 
