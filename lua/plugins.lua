@@ -26,7 +26,10 @@ return require('packer').startup({function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
-  use 'Mofiqul/dracula.nvim'
+  use {
+    'Mofiqul/dracula.nvim',
+    as = "dracula"
+  }
 
   -- [[ DEV ]]
   use {
@@ -39,11 +42,6 @@ return require('packer').startup({function(use)
   use 'tpope/vim-fugitive'
 
   use 'junegunn/gv.vim'
-
-  use {
-	  "windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
-  }
 
   use {
     'nvim-treesitter/nvim-treesitter',
