@@ -22,9 +22,9 @@ vim.keymap.set('n', '<F2>', '<cmd>NvimTreeToggle<CR>')
 -- Mapping key for work with tab
 vim.keymap.set('n', '<F5>', '<cmd>tabnew<CR>')
 vim.keymap.set('n', '<C-Left>', '<cmd>tabprevious<CR>')
-vim.keymap.set('n', '/,', '<cmd>tabprevious<CR>')
+vim.keymap.set('n', '<Leader>,', '<cmd>tabprevious<CR>')
 vim.keymap.set('n', '<C-Right>', '<cmd>tabnext<CR>')
-vim.keymap.set('n', '/.', '<cmd>tabnext<CR>')
+vim.keymap.set('n', '<Leader>.', '<cmd>tabnext<CR>')
 
 -- Turn off highlight after search
 vim.keymap.set('n', '<Leader>\\', '<cmd>noh<CR>')
