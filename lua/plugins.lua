@@ -19,17 +19,12 @@ return require('packer').startup({function(use)
     end
   }
 
-  use 'rainbowhxch/beacon.nvim'
-
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
-  use {
-    'Mofiqul/dracula.nvim',
-    as = "dracula"
-  }
+  use 'sainnhe/sonokai'
 
   -- [[ DEV ]]
   use {

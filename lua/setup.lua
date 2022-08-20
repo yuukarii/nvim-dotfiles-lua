@@ -1,5 +1,6 @@
 -- SET UP FOR INITIAL NEOVIM
 
+vim.cmd('colorscheme sonokai')
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
@@ -10,7 +11,7 @@ vim.opt.wrap = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.syntax = "ON"
-
+vim.opt.foldenable = false
 -- SET UP FOR COC.NVIM
 vim.opt.backup = false
 vim.opt.writebackup = false
