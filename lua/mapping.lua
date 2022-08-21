@@ -1,13 +1,13 @@
--- Quick move to above split window
+-- Quick move to the upper window
 vim.keymap.set('n', '<Leader><Up>', '<C-w>k')
 
--- Quick move to below split window
+-- Quick move to the bottom window
 vim.keymap.set('n', '<Leader><Down>', '<C-w>j')
 
--- Quick move to right split window
+-- Quick move to the right window
 vim.keymap.set('n', '<Leader><Right>', '<C-w>l')
 
--- Quick move to left split window
+-- Quick move to the left window
 vim.keymap.set('n', '<Leader><Left>', '<C-w>h')
 
 -- Open Telescope find_files
