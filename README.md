@@ -1,5 +1,7 @@
 # nvim-dotfiles-lua
 
+Go to the wiki page for more information
+
 ## Package required:
 - neovim 0.7.0+
 - ripgrep (For Telescope plugin)
