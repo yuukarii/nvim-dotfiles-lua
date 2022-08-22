@@ -67,4 +67,6 @@ nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
 nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 
+" Restart Coc
+nnoremap <silent> <F5> :<C-u>CocRestart<cr>
 ]])
