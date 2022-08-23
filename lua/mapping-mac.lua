@@ -23,7 +23,7 @@ map('n', 'fg', '<cmd>Telescope live_grep<CR>', opts)
 map('n', '<F2>', '<cmd>NvimTreeToggle<CR>', opts)
 
 -- Mapping key for work with tab
-map('n', '<F3>', '<cmd>tabnew<CR>', opts)
+map('n', '<C-t>', '<cmd>tabnew<CR>', opts)
 
 -- Turn off highlight after search
 map('n', '<Leader>\\', '<cmd>noh<CR>', opts)
