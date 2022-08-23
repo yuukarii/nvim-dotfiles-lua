@@ -26,6 +26,11 @@ return require('packer').startup({function(use)
 
   use 'sainnhe/sonokai'
 
+  use {
+    'romgrk/barbar.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'}
+  }
+
   -- [[ DEV ]]
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
