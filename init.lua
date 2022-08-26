@@ -1,6 +1,6 @@
-require('setup')
 require('plugins')
 
+local ok, _ = pcall(require, 'setup')
 local ok, _ = pcall(require, 'plugins_setup.nvim-tree')
 local ok, _ = pcall(require, 'plugins_setup.lualine')
 local ok, _ = pcall(require, 'plugins_setup.treesitter')
