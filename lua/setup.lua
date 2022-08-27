@@ -12,6 +12,8 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.syntax = "ON"
 vim.opt.foldenable = false
+-- Disable mouse on Nvim 0.8.0+
+vim.opt.mouse = {}
 -- SET UP FOR COC.NVIM
 vim.opt.backup = false
 vim.opt.writebackup = false
