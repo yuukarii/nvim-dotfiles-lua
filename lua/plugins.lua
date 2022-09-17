@@ -1,37 +1,22 @@
+-- This file can be loaded by calling `lua require('plugins')` from your init.vim
+
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup({function(use)
+return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-    'kyazdani42/nvim-web-devicons', -- optional, for file icons
-    },
-  }
+  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 
-  use {
-    'goolord/alpha-nvim',
-    config = function ()
-        require'alpha'.setup(require'alpha.themes.theta'.config)
-    end
-  }
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
 
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+  use 'L3MON4D3/LuaSnip'
 
-  use 'sainnhe/sonokai'
-
-  use {
-    'romgrk/barbar.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'}
-  }
-
-  -- [[ DEV ]]
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} }
@@ -45,26 +30,14 @@ return require('packer').startup({function(use)
         require('Comment').setup()
     end
   }
-
-  use 'tpope/vim-fugitive'
-
-  use 'junegunn/gv.vim'
-
+  
+  use 'm4xshen/autoclose.nvim'
+  use 'sainnhe/sonokai'
+  use 'romgrk/barbar.nvim'
   use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
+    'tanvirtin/vgit.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
   }
-
-  use {
-    'neoclide/coc.nvim',
-    branch = 'release'
-  }
-
-end,
-config = {
-  display = {
-    open_fn = function()
-      return require('packer.util').float({ border = 'single' })
-    end
-  }
-}})
+}
+end)

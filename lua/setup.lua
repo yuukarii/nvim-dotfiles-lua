@@ -1,6 +1,4 @@
--- SET UP FOR INITIAL NEOVIM
-
-vim.cmd('colorscheme sonokai')
+vim.opt.signcolumn = "yes"
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
@@ -12,14 +10,8 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.syntax = "ON"
 vim.opt.foldenable = false
--- Disable mouse on Nvim 0.8.0+
-vim.opt.mouse = {}
--- SET UP FOR COC.NVIM
-vim.opt.backup = false
-vim.opt.writebackup = false
-vim.opt.updatetime = 300 
-vim.opt.signcolumn = "yes"
-
+vim.o.updatetime = 300
+vim.o.incsearch = false
 vim.api.nvim_create_autocmd("FileType", { pattern = "lua,xml,perl",
   callback = function()
     vim.opt_local.shiftwidth = 2
@@ -27,6 +19,8 @@ vim.api.nvim_create_autocmd("FileType", { pattern = "lua,xml,perl",
     vim.opt_local.expandtab = true
   end
 })
+
+vim.cmd('colorscheme sonokai')
 
 -- show cursor line only in active window
 local cursorGrp = vim.api.nvim_create_augroup("CursorLine", { clear = true })

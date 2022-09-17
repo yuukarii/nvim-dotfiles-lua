@@ -20,7 +20,7 @@ map('n', 'ff', '<cmd>Telescope find_files<CR>', opts)
 map('n', 'fg', '<cmd>Telescope live_grep<CR>', opts)
 
 -- Toggle NvimTree
-map('n', '<F2>', '<cmd>NvimTreeToggle<CR>', opts)
+map('n', '<F2>', '<cmd>Lexplore<CR>', opts)
 
 -- Mapping key for work with tab
 map('n', '<C-t>', '<cmd>tabnew<CR>', opts)
