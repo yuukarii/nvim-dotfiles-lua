@@ -31,7 +31,6 @@ return require('packer').startup(function(use)
     end
   }
   
-  use 'm4xshen/autoclose.nvim'
   use 'sainnhe/sonokai'
   use 'romgrk/barbar.nvim'
   use {
