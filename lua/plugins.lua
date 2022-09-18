@@ -31,12 +31,17 @@ return require('packer').startup(function(use)
     end
   }
   
+  use {
+    "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+  }
+  use 'preservim/tagbar'
   use 'sainnhe/sonokai'
   use 'romgrk/barbar.nvim'
   use {
     'tanvirtin/vgit.nvim',
     requires = {
       'nvim-lua/plenary.nvim'
+    }
   }
-}
 end)
