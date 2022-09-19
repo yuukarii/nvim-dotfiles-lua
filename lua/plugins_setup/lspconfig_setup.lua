@@ -10,9 +10,6 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-  -- Enable completion triggered by <c-x><c-o>
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
@@ -33,14 +30,22 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
 end
 
-require('lspconfig').pylsp.setup{
-  capabilities = capabilities,
-  on_attach = on_attach,
-}
+-- For Pylsp
+-- require('lspconfig').pylsp.setup{
+--   capabilities = capabilities,
+--   on_attach = on_attach,
+-- }
 
-require'lspconfig'.jdtls.setup{
-  capabilities = capabilities,
-  on_attach = on_attach,
-  cmd = {"jdt-language-server"},
-  root_dir = require'lspconfig/util'.root_pattern(".git", "pom.xml"),
-}
+-- For Java
+-- require'lspconfig'.jdtls.setup{
+--   capabilities = capabilities,
+--   on_attach = on_attach,
+--   cmd = {"jdt-language-server"},
+--   root_dir = require'lspconfig/util'.root_pattern(".git", "pom.xml"),
+-- }
+
+-- For Perl
+-- require('lspconfig').perlls.setup{
+--   capabilities = capabilities,
+--   on_attach = on_attach,
+-- }

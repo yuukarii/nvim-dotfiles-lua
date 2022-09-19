@@ -36,7 +36,7 @@ map('n', 'fg', '<cmd>Telescope live_grep<CR>', opts)
 -- Toggle tagbar
 map('n', '<F8>', '<cmd>:TagbarToggle<CR>', opts)
 
--- Open Explorer
+-- Toggle Explorer
 map('n', '<F2>', '<cmd>Lexplore<CR>', opts)
 
 -- Open new tab
