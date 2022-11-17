@@ -1,31 +1,17 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-if (vim.loop.os_uname().sysname == "Darwin") then
-  -- Quick move to the upper window
-  map('n', '<Leader><Up>', '<C-w>k', opts)
+-- Quick move to the upper window
+map('n', '<C-Up>', '<C-w>k', opts)
 
-  -- Quick move to the bottom window
-  map('n', '<Leader><Down>', '<C-w>j', opts)
+-- Quick move to the bottom window
+map('n', '<C-Down>', '<C-w>j', opts)
 
-  -- Quick move to the right window
-  map('n', '<Leader><Right>', '<C-w>l', opts)
+-- Quick move to the right window
+map('n', '<C-Right>', '<C-w>l', opts)
 
-  -- Quick move to the left window
-  map('n', '<Leader><Left>', '<C-w>h', opts)
-else
-  -- Quick move to the upper window
-  map('n', '<C-Up>', '<C-w>k', opts)
-
-  -- Quick move to the bottom window
-  map('n', '<C-Down>', '<C-w>j', opts)
-
-  -- Quick move to the right window
-  map('n', '<C-Right>', '<C-w>l', opts)
-
-  -- Quick move to the left window
-  map('n', '<C-Left>', '<C-w>h', opts)
-end
+-- Quick move to the left window
+map('n', '<C-Left>', '<C-w>h', opts)
 
 -- Open Telescope find_files
 map('n', 'ff', '<cmd>Telescope find_files<CR>', opts)
