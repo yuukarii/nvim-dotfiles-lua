@@ -23,7 +23,6 @@ return require('packer').startup({function(use)
     end
   }
   
-  use 'preservim/tagbar'
   use 'sainnhe/sonokai'
   use 'romgrk/barbar.nvim'
   use {
