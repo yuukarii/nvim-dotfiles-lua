@@ -13,14 +13,15 @@ map('n', '<C-Right>', '<C-w>l', opts)
 -- Quick move to the left window
 map('n', '<C-Left>', '<C-w>h', opts)
 
+-- Save files
+map('n', '<C-s>', '<cmd>w<CR>', opts)
+map('i', '<C-s>', '<Esc><cmd>w<CR>i', opts)
+
 -- Open Telescope find_files
 map('n', 'ff', '<cmd>Telescope find_files<CR>', opts)
 
 -- Open Telescope live_grep
 map('n', 'fg', '<cmd>Telescope live_grep<CR>', opts)
-
--- Toggle tagbar
-map('n', '<F8>', '<cmd>:TagbarToggle<CR>', opts)
 
 -- Toggle Explorer
 map('n', '<F2>', '<cmd>Lexplore<CR>', opts)
