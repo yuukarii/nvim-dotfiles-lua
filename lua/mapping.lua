@@ -14,8 +14,8 @@ map('n', '<C-Right>', '<C-w>l', opts)
 map('n', '<C-Left>', '<C-w>h', opts)
 
 -- Save files
-map('n', '<C-s>', '<cmd>w<CR>', opts)
-map('i', '<C-s>', '<Esc><cmd>w<CR>i', opts)
+map('n', '<C-s>', '<cmd>wa<CR>', opts)
+map('i', '<C-s>', '<Esc><cmd>wa<CR>i', opts)
 
 -- Open Telescope find_files
 map('n', 'ff', '<cmd>Telescope find_files<CR>', opts)
