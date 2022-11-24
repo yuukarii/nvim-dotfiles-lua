@@ -1,3 +1,4 @@
+-- Use :verbose nmap <key> to check a key
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
@@ -16,6 +17,9 @@ map('n', '<C-Left>', '<C-w>h', opts)
 -- Save files
 map('n', '<C-s>', '<cmd>wa<CR>', opts)
 map('i', '<C-s>', '<Esc><cmd>wa<CR>i', opts)
+
+-- For java
+-- map('n', '<C-x>', '<Esc><cmd>!mvn clean install<CR>', opts)
 
 -- Open Telescope find_files
 map('n', 'ff', '<cmd>Telescope find_files<CR>', opts)
