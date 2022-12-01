@@ -31,7 +31,7 @@ map('n', 'fg', '<cmd>Telescope live_grep<CR>', opts)
 map('n', '<F2>', '<cmd>Lexplore<CR>', opts)
 
 -- Open new tab
-map('n', '<C-t>', '<cmd>tabnew<CR>', opts)
+map('n', '<C-n>', '<cmd>tabnew<CR>', opts)
 
 -- Turn off highlight after search
 map('n', '<Leader>\\', '<cmd>noh<CR>', opts)

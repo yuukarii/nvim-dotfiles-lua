@@ -38,12 +38,9 @@ return require('packer').startup({function(use)
   
   use 'sainnhe/sonokai'
   use 'romgrk/barbar.nvim'
-  use {
-    'tanvirtin/vgit.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim'
-    }
-  }
+  
+  use 'lewis6991/gitsigns.nvim'
+
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
@@ -53,6 +50,11 @@ return require('packer').startup({function(use)
     'neoclide/coc.nvim',
     branch = 'release'
   }
+
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end}
+  -- ====================
   if packer_bootstrap then
     require('packer').sync()
   end
