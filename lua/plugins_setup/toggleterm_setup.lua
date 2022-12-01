@@ -1,13 +1,10 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-map('n', '<C-t>1', '<cmd>1ToggleTerm direction=vertical<CR>', opts)
-map('n', '<C-t>2', '<cmd>2ToggleTerm direction=vertical<CR>', opts)
-map('n', '<C-t>f', '<cmd>ToggleTerm direction=float<CR>', opts)
+map('n', '<C-t>', '<cmd>ToggleTerm size=80 direction=vertical<CR>', opts)
 
 function _G.set_terminal_keymaps()
   local opts = {buffer = 0}
-  vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
   vim.keymap.set('t', 'jk', [[<C-\><C-n>]], opts)
   vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
   vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)

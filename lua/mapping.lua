@@ -14,10 +14,6 @@ map('n', '<C-Right>', '<C-w>l', opts)
 -- Quick move to the left window
 map('n', '<C-Left>', '<C-w>h', opts)
 
--- Save files
-map('n', '<C-s>', '<cmd>wa<CR>', opts)
-map('i', '<C-s>', '<Esc><cmd>wa<CR>i', opts)
-
 -- For java
 -- map('n', '<C-x>', '<Esc><cmd>!mvn clean install<CR>', opts)
 
